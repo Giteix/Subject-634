@@ -1,0 +1,351 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Subject 634</title>
+<style>
+body {
+    background-color: black;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: white;
+    font-size: 15px;
+}
+
+.central-box {
+    background-color: black;
+    border: 2px solid white;
+    box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    border-radius: 10px;
+    width: 85%;
+    max-width: 900px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.central-title {
+    font-size: 38px;
+    text-align: center;
+    text-shadow: 0 0 10px white;
+    margin-bottom: 20px;
+}
+
+.button-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    text-shadow: 0 0 6px white;
+    transition: 0.2s;
+}
+
+.button-container button:hover {
+    background-color: white;
+    color: black;
+    text-shadow: none;
+}
+
+.section {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.section.active {
+    display: flex;
+}
+
+.section h3 {
+    margin-top: 0;
+    font-size: 24px;
+    text-decoration: underline;
+    text-shadow: 0 0 8px white;
+}
+
+.keter {
+    color: red;
+    text-shadow: 0 0 8px red;
+    font-weight: bold;
+}
+
+.status {
+    margin-top: 5px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 6px white;
+    font-size: 20px;
+}
+
+.alert {
+    color: red;
+    text-shadow: 0 0 8px red;
+    font-weight: bold;
+    border: 2px solid red;
+    padding: 12px;
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.image-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.image-item img {
+    max-width: 60%;
+    border: 2px solid white;
+    border-radius: 6px;
+    box-shadow: 0 0 12px rgba(255,255,255,0.8);
+}
+
+.image-caption {
+    margin-top: 5px;
+    border: 2px solid white;
+    box-shadow: 0 0 8px rgba(255,255,255,0.6);
+    border-radius: 6px;
+    padding: 4px 10px;
+    color: white;
+    text-shadow: 0 0 6px white;
+    font-size: 16px;
+    background-color: black;
+    text-align: center;
+}
+
+.menu-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-height: 60vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.menu-row::-webkit-scrollbar {
+    width: 8px;
+}
+
+.menu-row::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.5);
+    border-radius: 4px;
+}
+
+.menu-row::-webkit-scrollbar-track {
+    background-color: rgba(255,255,255,0.1);
+}
+
+.drop_details {
+    background-color: black;
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 10px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 0 0 6px white;
+}
+
+.drop_details summary {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    outline: none;
+}
+
+.drop_details p {
+    margin: 5px 0 0 0;
+}
+
+#images {
+    max-height: 60vh;
+    overflow-y: auto;
+    width: 100%;
+}
+
+#images .image-item {
+    margin-bottom: 15px;
+}
+
+@media (max-width: 700px) {
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-item img {
+        max-width: 80%;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="central-box">
+    <div class="central-title">Subject 634</div>
+
+    <div class="button-container">
+        <button onclick="showSection('main')">Main</button>
+        <button onclick="showSection('logs')">Transcripts</button>
+        <button onclick="showSection('images')">Images</button>
+    </div>
+
+    <div id="main" class="section active">
+        <h3>Item #: Subject 634</h3>
+        <p><strong>Object Class:</strong> <span class="keter">Keter</span></p>
+        <div class="status">Status: Unknown, the entity has escaped...</div>
+
+        <h3>Special Containment Procedures:</h3>
+        <p>
+            Subject 634 is contained in a reinforced chamber just large enough to restrict movement.  
+            The room is equipped with an emergency monitoring system: any breach triggers the release of liquid nitrogen.  
+            Access is limited to Level 4 personnel only.
+        </p>
+
+        <h3>Description:</h3>
+        <p>
+            Subject 634 is a failed experiment of regenerative substance LR-03.  
+            During testing, one researcher was absorbed by the substance, creating a new life form.  
+            The entity can change voices, alter its form, and modify its slime body into different substances (e.g., it can replicate liquids it knows).  
+            It is dangerous, capable of assimilating other objects and creating clones.  
+            While it may take a female humanoid appearance, it is neither fully female nor fully human.
+        </p>
+
+        <div class="alert">
+            Under no circumstances should personnel interact with this entity.<br>
+            If sighted, immediately contact: [REDACTED]
+        </div>
+    </div>
+
+    <div id="logs" class="section">
+        <h3>Logs</h3>
+        <p style="color: white; text-shadow: 0 0 4px white; margin-bottom: 15px; text-align: center;">
+          [Certain logs are missing or unavailable for Level 3 personnel]
+        </p>
+        <div class="menu-row">
+            <!-- Log 1 -->
+            <details class="drop_details">
+                <summary>Log 1 – First Encounter</summary>
+                <p><br>
+Dr Daren: Hello, I’m Dr Daren. Today we’ll have a simple conversation. What is your name?<br><br>
+Subject-634: My… name?<br><br>
+Dr Daren: Yes. Did you choose it yourself?<br><br>
+Subject-634: I… think so… Nami. It sounds… okay, right?<br><br>
+Dr Daren: Do you remember anything? Perhaps the moment you were created, or before that?<br><br>
+Subject-634: I… woke up somewhere strange. Then some people found me… they told me to wait in a room.<br><br>
+Dr Daren: So you don’t remember anything else?<br><br>
+Subject-634: I… I think I said everything… yes?<br><br>
+Dr Daren: Interesting… you don’t recall a previous life?<br><br>
+Subject-634: Previous life…? What is life…?<br><br>
+[The remainder of the conversation contained nothing significant for the log.]
+                </p>
+            </details>
+            <!-- Log 2 -->
+            <details class="drop_details">
+                <summary>About My Bots</summary>
+                <p><br>
+Dr. Daren: So, how are you feeling today? It’s been a while since our last session.<br><br>
+Subject-634: I’ve learned a few things… look!<br><br>
+[Subject-634 shifts into a female humanoid form with black hair, green eyes, wearing a black dress, resembling Doctor (REDACTED)]<br><br>
+Dr. Daren: You can change forms… that’s impressive. Could you take the shape of an object or someone else?<br><br>
+Subject-634: Not really… I would need to know how that object or person looks, understand its structure. You could say I need to absorb it to know what it is.<br><br>
+Dr. Daren: So the things you absorb are stored in your memory, and you can take their form?<br><br>
+Subject-634: Exactly. I’ve also learned to change my slime into water or other liquids, but that costs a part of me.<br><br>
+Dr. Daren: I heard you feed only on meat. Why do you eat only meat?<br><br>
+Subject-634: I don’t know… I think it’s something that makes me stronger. Every day I feel a part of me fall away, and I need to replenish it. I think meat is my fuel?<br><br>
+Dr. Daren: You mean food?<br><br>
+Subject-634: Yes. Meat is food I can absorb, and it makes my body regenerate.<br><br>
+[Further conversations not relevant for logs.]
+                </p>
+            </details>
+            <!-- Log 20 -->
+            <details class="drop_details">
+                <summary>Log 20 – Incident-634-01</summary>
+                <p><br>
+Dr. Daren: Tell me… why did you do it?<br><br>
+Subject-634: …<br><br>
+Dr. Daren: You killed five people. You know that continuing actions like this could result in termination.<br><br>
+Subject-634: …<br><br>
+Dr. Daren: Something happened. I need to understand it, I want to help you.<br><br>
+Subject-634: … (avoids eye contact)<br><br>
+Dr. Daren: Nami… I need to know what happened. I can’t help you if you don’t tell me. Why did you kill them? You’re not a monster, right?<br><br>
+Subject-634: I… didn’t kill them.<br><br>
+Dr. Daren: What do you mean?<br><br>
+Subject-634: I absorbed them… they became part of me.<br><br>
+Dr. Daren: What does that mean? You had blood on your hands.<br><br>
+Subject-634: They attacked me. I had to defend myself.<br><br>
+Dr. Daren: The recordings show you attacked them first. Please… don’t lie. Be honest.<br><br>
+(Subject-634 is silent for a moment)<br><br>
+Subject-634: What is the purpose of this conversation?<br><br>
+Dr. Daren: …What do you mean?<br><br>
+Subject-634: You’re all the same… research… experiments… 634… I’d had enough.<br><br>
+Dr. Daren: Do you feel anything about what you did?<br><br>
+Subject-634: Nothing… they deserved it.<br><br>
+Dr. Daren: You know hurting others is wrong.<br><br>
+Subject-634: …<br><br>
+Dr. Daren: You know if you continue like this, you could be terminated.<br><br>
+(Subject-634 pauses again)<br><br>
+Subject-634: Do you… like me?<br><br>
+Dr. Daren: What?<br><br>
+(Subject-634 waits silently, staring without moving)<br><br>
+Dr. Daren: Yes… I think you’re… an interesting entity.<br><br>
+Subject-634: Lies… if you truly cared, you would understand my suffering. But you are just like them. You are lucky I like you… or I would drain all the blood from your body.<br><br>
+[End of interaction. Object refuses further cooperation.]<br><br>
+[Log forwarded to [REDACTED] for containment review. Daily containment breaches have been observed, requiring enhanced liquid nitrogen systems and additional security protocols. Direct interaction with Subject-634 is restricted to Level 3 personnel and above. Object is classified as Keter.]
+                </p>
+            </details>
+        </div>
+    </div>
+
+    <div id="images" class="section">
+        <h3>Images</h3>
+        <div style="max-height: 60vh; overflow-y: auto; width: 100%;">
+            <div class="image-item">
+                <img src="First Encounter.png" alt="First Encounter">
+                <div class="image-caption">First Encounter</div>
+            </div>
+            <div class="image-item">
+                <img src="Containment Room.png" alt="Containment Room">
+                <div class="image-caption">Containment Room</div>
+            </div>
+            <div class="image-item">
+                <img src="Human form.png" alt="Human Form">
+                <div class="image-caption">Human Form</div>
+            </div>
+            <div class="image-item">
+                <img src="Incident.png" alt="Incident">
+                <div class="image-caption">Incident – incydent-634-01</div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function showSection(sectionId) {
+    document.querySelectorAll('.section').forEach(sec => {
+        sec.classList.remove('active');
+    });
+    document.getElementById(sectionId).classList.add('active');
+}
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Access Terminal</title>
+<style>
+body {
+    background-color: black;
+    font-family: monospace;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.terminal-box {
+    border: 2px solid white;
+    box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    padding: 20px;
+    width: 500px;
+    text-align: left;
+    color: lime;
+    text-shadow: 0 0 8px lime;
+    background-color: black;
+}
+</style>
+</head>
+<body>
+
+<div class="terminal-box" id="terminal">
+    Little_Demon46 - Access Level 3 granted<br>
+Initializing secure terminal...<br>
+Authenticating user credentials... SUCCESS<br>
+Loading Subject 634 containment database...<br>
+Establishing connection to archival logs...<br>
+Please stand by...
+</div>
+
+<script>
+// Po 5 sekundach przekierowuje na podstronę subject634.html
+setTimeout(() => {
+    window.location.href = "subject634.html";
+}, 5000);
+</script>
+
+</body>
+</html>
+
